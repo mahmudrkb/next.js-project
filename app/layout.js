@@ -24,7 +24,7 @@ export default async function RootLayout({ children }) {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
-  console.log(user, "this is user ");
+  // console.log(user, "this is user ");
   return (
     <html lang="en" className="p-4 bg-black container mx-auto  ">
       <body
@@ -76,7 +76,7 @@ export default async function RootLayout({ children }) {
                   {" "}
                   <Link href="/profile">Profile</Link>{" "}
                 </li>
-                <li>{user?.email}</li>
+                <li> this is name {user?.email}</li>
               </ul>
             </div>
             <div className="navbar-end">
