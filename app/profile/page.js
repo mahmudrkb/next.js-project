@@ -1,7 +1,7 @@
-import React from "react";
-
-function Profile() {
-  return <div>Profile</div>;
+export default function Profile() {
+  return (
+    <div>
+      <h1 className="text-red-700">Welcome to Profile</h1>
+    </div>
+  );
 }
-
-export default Profile;
