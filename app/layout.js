@@ -4,6 +4,7 @@ import Link from "next/link";
 import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,8 +69,8 @@ export default async function RootLayout({ children }) {
                   </li>
                   <li>
                     <div className="avatar">
-                      <div className="w-10 rounded-full">
-                        <img src={user?.picture} />
+                      <div className="w-11 rounded-full">
+                        <Image src={user?.picture} alt="profile" />
                       </div>
                     </div>{" "}
                   </li>
@@ -90,7 +91,7 @@ export default async function RootLayout({ children }) {
                 <li>
                   <div className="avatar">
                     <div className="w-10 rounded-full">
-                      <img src={user?.picture} />
+                      <Image src={user?.picture} alt="profile" />
                     </div>
                   </div>{" "}
                 </li>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import getAllData from "@/lib/getAllData";
+import Image from "next/image";
 
 async function Blog() {
   const allData = await getAllData();
@@ -17,7 +18,7 @@ async function Blog() {
             className="card  card-compact bg-base-100  shadow-xl"
           >
             <figure>
-              <img
+              <Image
                 src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
                 alt="Shoes"
               />

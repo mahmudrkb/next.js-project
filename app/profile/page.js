@@ -6,9 +6,11 @@ export default async function Profile() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   return (
-    <div className=" flex justify-center items-center h-screen">
-      <h1 className="">Welcome to Profile</h1>
-      <h3 className="text-xl  ">This is me {user.given_name} </h3>
+    <div>
+      <div className=" mt-10 flex justify-center items-center h-screen">
+        <h1 className="text-md ">Welcome to Profile</h1>
+        <h3 className="text-xl ">This is me {user?.given_name} </h3>
+      </div>
     </div>
   );
 }
