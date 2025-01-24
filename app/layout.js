@@ -62,12 +62,23 @@ export default async function RootLayout({ children }) {
                     {" "}
                     <Link href="/">Home</Link>{" "}
                   </li>
+                  <li>
+                    {" "}
+                    <Link href="/profile">Profile</Link>{" "}
+                  </li>
+                  <li>
+                    <div className="avatar">
+                      <div className="w-10 rounded-full">
+                        <img src={user?.picture} />
+                      </div>
+                    </div>{" "}
+                  </li>
                 </ul>
               </div>
               <a className="btn btn-ghost text-xl">NEXT.JS</a>
             </div>
-            <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
+            <div className="navbar-center hidden lg:flex ">
+              <ul className="menu items-center menu-horizontal px-1">
                 <li>
                   {" "}
                   <Link href="/">Home</Link>{" "}
@@ -76,7 +87,13 @@ export default async function RootLayout({ children }) {
                   {" "}
                   <Link href="/profile">Profile</Link>{" "}
                 </li>
-                <li> this is name {user?.email}</li>
+                <li>
+                  <div className="avatar">
+                    <div className="w-10 rounded-full">
+                      <img src={user?.picture} />
+                    </div>
+                  </div>{" "}
+                </li>
               </ul>
             </div>
             <div className="navbar-end">

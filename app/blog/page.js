@@ -1,19 +1,17 @@
 import Link from "next/link";
 import React from "react";
-import img from "@/public/pet-11.jpg";
-import Image from "next/image";
 import getAllData from "@/lib/getAllData";
 
 async function Blog() {
   const allData = await getAllData();
-  console.log(allData);
+  // console.log(allData);
 
   return (
     <main>
       <div className="my-10">All Blog {allData.length}</div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5 ">
-        {allData.map((data) => (
+        {allData.slice(0, 12).map((data) => (
           <div
             key={data.id}
             className="card  card-compact bg-base-100  shadow-xl"
